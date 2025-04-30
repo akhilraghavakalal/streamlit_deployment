@@ -10,7 +10,8 @@ st.set_page_config(page_title="OpenAI API Demo")
 load_dotenv()
 
 # Get the API key
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+# OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 
 # Create a function to get response from OpenAI
 def get_openai_response(query):
